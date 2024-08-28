@@ -16,6 +16,5 @@ class WrongCat
 
 		WrongCat& operator=(const WrongCat& rhs);
 	private:
-		std::string _type;
 };
 #endif

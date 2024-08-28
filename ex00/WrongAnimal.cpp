@@ -20,7 +20,7 @@ WrongAnimal::~WrongAnimal(){
 }
 
 void	WrongAnimal::makeSound()const{
-	std::cout<<"Anmial(): make wronganimal sound!\n";
+	std::cout<<"WrongAnmial::makeSound(): make wronganimal sound!\n";
 }
 
 std::string	WrongAnimal::getType()const{

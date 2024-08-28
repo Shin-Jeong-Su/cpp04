@@ -19,10 +19,6 @@ Animal::~Animal(){
 	std::cout<<"~Animal()\n";
 }
 
-void	Animal::makeSound()const{
-	std::cout<<"Anmial::makeSound(): make animal sound!\n";
-}
-
 std::string	Animal::getType()const{
 	return (_type);
 }

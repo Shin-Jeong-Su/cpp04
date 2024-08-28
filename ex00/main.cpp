@@ -40,11 +40,11 @@ int main(){
 	{
 		std::cout<<"Dog's test\n";
 		const Animal* gamma= new Animal();
-		const Animal* k = new WrongCat();
+		const Animal* k = new Dog();
 		std::cout<<k->getType()<<"\n";
 		k->makeSound();
-		beta->makeSound();
-		delete beta;
+		gamma->makeSound();
+		delete gamma;
 		delete k;
 		std::cout<<"\n";
 	}

@@ -15,7 +15,7 @@ class WrongAnimal{
 		std::string		getType()const;
 
 		WrongAnimal& operator=(const WrongAnimal& rhs);
-	private:
+	protected:
 		std::string	_type;
 };
 #endif

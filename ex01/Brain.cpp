@@ -13,6 +13,18 @@ Brain::~Brain(){
     std::cout<<"~Brain()\n";
 }
 
+void	Brain::setIdea(int i, const std::string& idea){
+	_ideas[i]=idea;
+}
+
+void	Brain::prtIdeas(){
+	for(int i=0;i<100;i++){
+		if(_ideas[i].size()){
+			std::cout<<"Ideas["<<i<<"]: "<<_ideas[i]<<"\n";
+		}
+	}
+}
+
 Brain& Brain::operator=(const Brain& rhs){
     std::cout<<"operator=(const Brain& rhs)\n";
     if (this==&rhs)

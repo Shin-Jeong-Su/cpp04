@@ -2,12 +2,12 @@
 #include "Dog.hpp"
 #include <iostream>
 
-// void chl(){
-// 	system("leaks a.out");
-// }
+void chl(){
+	system("leaks a.out");
+}
 
 int main(){
-	// atexit(chl);
+	atexit(chl);
 	{
 		std::cout<<"#######################################\n";
 		std::cout<<"Subject's test\n";
@@ -34,26 +34,12 @@ int main(){
 	{
 		std::cout<<"#######################################\n";
 		std::cout<<"More test\n";
-		const Animal* k = new Animal();
-		k->makeSound();
-		std::cout<<"\n";
-	}
-	{
-		std::cout<<"#######################################\n";
-		Dog* d1 = new Dog();
-		Dog* d2 = d1;
-		d2->makeSound();
-		Dog* d3(d1);
-		d3->makeSound();
-		std::cout<<"\n";
-	}
-	{
-		std::cout<<"#######################################\n";
-		Cat* c1 = new Cat();
-		Cat* c2 = c1;
-		c2->makeSound();
-		Cat* c3(c1);
-		c3->makeSound();
+		Cat cat1;
+		cat1.getBrain()->setIdea(10,"........?");
+		std::cout<<cat1.getBrain()<<"\n";
+		Cat cat2 = cat1;
+		cat2.getBrain()->prtIdeas();
+		std::cout<<cat2.getBrain()<<"\n";
 		std::cout<<"\n";
 	}
 }

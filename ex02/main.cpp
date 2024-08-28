@@ -20,7 +20,7 @@ int main(){
 	{
 		std::cout<<"#######################################\n";
 		std::cout<<"More test\n";
-		// const Animal* k = new Animal();
+		// const Animal* k = new Animal(); //불가
 		Dog* d1 = new Dog();
 		Dog* d2 = d1;
 		d2->makeSound();

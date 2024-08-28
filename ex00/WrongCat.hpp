@@ -12,7 +12,7 @@ class WrongCat
 
 		virtual	~WrongCat();
 
-		virtual void	makeSound()const;
+		void	makeSound()const;
 
 		WrongCat& operator=(const WrongCat& rhs);
 	private:

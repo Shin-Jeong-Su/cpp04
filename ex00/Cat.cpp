@@ -5,6 +5,7 @@ Cat::Cat()
 :Animal("Cat"){
 	std::cout<<"Cat()\n";
 }
+
 Cat::Cat(const Cat& rhs)
 :Animal(rhs._type){
 	std::cout<<"Cat(const Cat& rhs)\n";

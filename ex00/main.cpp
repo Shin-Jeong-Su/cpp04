@@ -28,7 +28,7 @@ int main(){
 	{
 		std::cout<<"WrongAnimal's test\n";
 		const WrongAnimal* beta= new WrongAnimal();
-		const WrongAnimal* k = new WrongCat();
+		const WrongCat* k = new WrongCat();
 		std::cout<<k->getType()<<"\n";
 		k->makeSound();
 		beta->makeSound();

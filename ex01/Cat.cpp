@@ -20,13 +20,17 @@ void	Cat::makeSound()const{
 	std::cout<<"야옹\n";
 }
 
-Cat& Cat::operator=(const Cat& rhs){
+Brain*	Cat::getBrain()const{
+	return (_brain);
+}
+
+Cat&	Cat::operator=(const Cat& rhs){
 	std::cout<<"operator=(const Cat& rhs)\n";
     if (this==&rhs){
         return (*this);
 	}
 	_type=rhs._type;
-	delete rhs._brain;
+	delete _brain;
 	_brain=new Brain(*(rhs._brain));
 	return (*this);
 }

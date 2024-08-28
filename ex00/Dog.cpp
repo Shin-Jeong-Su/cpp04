@@ -5,6 +5,7 @@ Dog::Dog()
 :Animal("Dog"){
 	std::cout<<"Dog()\n";
 }
+
 Dog::Dog(const Dog& rhs)
 :Animal(rhs._type){
 	std::cout<<"Dog(const Dog& rhs)\n";

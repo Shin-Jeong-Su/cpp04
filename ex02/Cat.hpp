@@ -7,11 +7,12 @@
 class Cat
 :public Animal{
 	public:
-		Cat();
-		Cat(const Cat& rhs);
+				Cat();
+				Cat(const Cat& rhs);
 		virtual ~Cat();
 		virtual void	makeSound()const;
-		Cat& operator=(const Cat& rhs);
+		Brain*			getBrain()const;
+		Cat&	operator=(const Cat& rhs);
 	private:
 		Brain*	_brain;
 };

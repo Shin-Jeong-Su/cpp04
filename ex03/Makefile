@@ -12,7 +12,7 @@ SRCS := main.cpp\
 		IMateriaSource.cpp\
 		MateriaSource.cpp
 
-HEADERS := Amateria.hpp\
+HEADERS := AMateria.hpp\
 			Cure.hpp\
 			Ice.hpp\
 			ICharacter.hpp\

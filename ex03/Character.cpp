@@ -28,7 +28,7 @@ std::string const & Character::getName() const{
 
 void Character::equip(AMateria* m){
 	for(int i=0; i<4; i++){
-		if (_inventory[i] == nullptr){
+		if (_inventory[i] == NULL){
 			_inventory[i] = m;
 			return ;
 		}
@@ -37,21 +37,21 @@ void Character::equip(AMateria* m){
 }
 
 void Character::unequip(int idx){
-	if (_inventory[idx]==nullptr){
+	if (_inventory[idx]==NULL){
 		std::cout<<_name<<"'s inventory["<<idx<<"] isn't. Can't unequip\n";
 		return ;
 	}
 	for(int j=0;j<4;j++){
-		if (_savingInventory[j]==nullptr){
+		if (_savingInventory[j]==NULL){
 			_savingInventory[j] = _inventory[idx];
-			_inventory[idx]=nullptr;
+			_inventory[idx]=NULL;
 			return ;
 		}
 	}
 }
 
 void Character::use(int idx, ICharacter& target){
-	if (_inventory[idx]==nullptr){
+	if (_inventory[idx]==NULL){
 		std::cout<<_name<<"'s inventory["<<idx<<"] isn't. Can't use\n";
 		return ;
 	}
@@ -60,10 +60,10 @@ void Character::use(int idx, ICharacter& target){
 
 void	Character::_setEmptyInventory(){
 	for(int i=0;i<4;i++){
-		_inventory[i]=nullptr;
+		_inventory[i]=NULL;
 	}
 	for(int i=0;i<4;i++){
-		_savingInventory[i]=nullptr;
+		_savingInventory[i]=NULL;
 	}
 }
 
@@ -87,13 +87,13 @@ void		Character::_deleteInventory(){
 	for(int i=0; i<4; i++){
 		if(_inventory[i]){
 			delete _inventory[i];
-			_inventory[i] = nullptr;
+			_inventory[i] = NULL;
 		}
 	}
 	for(int i=0;i<4;i++){
 		if(_savingInventory[i]){
 			delete _savingInventory[i];
-			_savingInventory[i] = nullptr;
+			_savingInventory[i] = NULL;
 		}
 	}
 }

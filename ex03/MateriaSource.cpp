@@ -17,7 +17,7 @@ MateriaSource::~MateriaSource(){
 
 void		MateriaSource::learnMateria(AMateria* m){
 	for(int i=0; i<4; i++){
-		if (_sources[i] == nullptr){
+		if (_sources[i] == NULL){
 			_sources[i] = m;
 			return ;
 		}
@@ -29,18 +29,18 @@ void		MateriaSource::learnMateria(AMateria* m){
 AMateria*	MateriaSource::createMateria(const std::string& type){
 	AMateria*	ret;
 	for(int i=0; i<4; i++){
-		if (_sources[i] != nullptr && _sources[i]->getType() == type){
+		if (_sources[i] != NULL && _sources[i]->getType() == type){
 			ret = _sources[i];
-			_sources[i] = nullptr;
+			_sources[i] = NULL;
 			return (ret);
 		}
 	}
-	return (nullptr);
+	return (NULL);
 }
 
 void	MateriaSource::_setSources(){
 	for(int i=0;i<4;i++){
-		_sources[i]=nullptr;
+		_sources[i]=NULL;
 	}
 }
 
@@ -59,7 +59,7 @@ void		MateriaSource::_deleteSources(){
 	for(int i=0; i<4; i++){
 		if(_sources[i]){
 			delete _sources[i];
-			_sources[i] = nullptr;
+			_sources[i] = NULL;
 		}
 	}
 }

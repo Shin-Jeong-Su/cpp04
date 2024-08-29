@@ -3,13 +3,14 @@
 #include "Character.hpp"
 #include "MateriaSource.hpp"
 #include <iostream>
+#include "AMateria.hpp"
 
-void chl(){
-	system("leaks a.out");
-}
+// void chl(){
+// 	system("leaks a.out");
+// }
 
 int main(){
-	atexit(chl);
+	// atexit(chl);
 
 	{
 		//subject's test
@@ -28,17 +29,33 @@ int main(){
 		// delete bob; delete me; delete src;
 	}
 	{
-		MateriaSource src;
-		src.learnMateria(new Ice());
-		src.learnMateria(new Ice());
-		src.learnMateria(new Ice());
-		src.learnMateria(new Ice());
+		//test2. 4개초과로 스킬을 배울 수 없음.
+		// MateriaSource src;
+		// src.learnMateria(new Ice());
+		// src.learnMateria(new Ice());
+		// src.learnMateria(new Ice());
+		// src.learnMateria(new Ice());
 		//1
-		Cure *cure = new Cure;
-		src.learnMateria(cure);
-		std::cout<<cure->getType();
+		// Cure *cure = new Cure;
+		// src.learnMateria(cure);
 		//2
 		// src.learnMateria(new Cure());
+	}
+	{
+		//배우지않은 스킬을 equip, uneuip, use해보기.
+		IMateriaSource* src= new MateriaSource();
+		ICharacter* jeshin= new Character("jeshin");
+		src->learnMateria(new Ice());
+		AMateria* tmp = src->createMateria("cure");
+		jeshin->equip(tmp);
+		tmp = src->createMateria("ice");
+		jeshin->equip(tmp);
+		// jeshin->unequip(0);
+		// jeshin->unequip(1);
+		ICharacter* seunghan=new Character("seunghan");
+		jeshin->use(0,*seunghan);
+		jeshin->use(1,*seunghan);
+		delete src;delete jeshin;delete seunghan;
 	}
 	return 0; 
 }

@@ -2,12 +2,12 @@
 #include "Dog.hpp"
 #include <iostream>
 
-void chl(){
-	system("leaks a.out");
-}
+// void chl(){
+// 	system("leaks a.out");
+// }
 
 int main(){
-	atexit(chl);
+	// atexit(chl);
 	{
 		std::cout<<"#######################################\n";
 		std::cout<<"Subject's test\n";

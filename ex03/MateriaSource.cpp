@@ -35,6 +35,7 @@ AMateria*	MateriaSource::createMateria(const std::string& type){
 			return (ret);
 		}
 	}
+	std::cout<<"createMateria(): doesn't work, type for creating: "<<type<<"\n";
 	return (NULL);
 }
 
